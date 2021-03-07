@@ -1,27 +1,10 @@
 {
-  "name": "adserver",
+  "name": "project-docs",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.7",
-    "socket.io": "^3.0.4"
-  },
-  "devDependencies": {},
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js",
+    "test": "nodemon test.js",
     "dev": "nodemon main.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/siewdass/adserver.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/siewdass/adserver/issues"
-  },
-  "homepage": "https://github.com/siewdass/adserver#readme"
+    "start": "node main.js",
+  }
 }
