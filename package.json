@@ -1,10 +1,14 @@
 {
   "name": "project-docs",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "nodemon test.js",
-    "dev": "nodemon main.js",
-    "start": "node main.js"
+    "build": "webpack --mode development"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   }
 }
