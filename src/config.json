@@ -1,0 +1,27 @@
+{
+  "name": "black-box", 
+  "version": "1.0.0", 
+  "device": "0", 
+  "imei": "0", 
+  "api": "http://69.64.32.172:3007/api/v1", 
+  "tracker": "69.64.32.172", 
+  "socket": "3008",
+  "video_backup": "/home/zurikato/video-backup", 
+  "camera_img": "/home/zurikato/camera/camera.jpg", 
+  "modules": {
+    "media-user": {
+      "version": "null", 
+      "url": "null", 
+      "path": "null", 
+      "port": "null"
+    }, 
+    "api-device": {
+      "version": "null", 
+      "url": "null", 
+      "path": "null", 
+      "program": "node", 
+      "port": "null", 
+      "script": "dist/main.js"
+    }
+  }
+}
