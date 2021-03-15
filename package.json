@@ -4,7 +4,9 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "pull": "git pull",
+    "push": "git add . && git commit -m '-' && git push"
   },
   "dependencies": {
     "express": "^4.17.1",
