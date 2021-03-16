@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "build": "webpack --mode production",
-    "pull": "git pull",
-    "push": "git add . && git commit -m '-' && git push"
+    "pull": "node git.config.js pull",
+    "push": "node git.config.js push"
   },
   "dependencies": {
     "express": "^4.17.1",
