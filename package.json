@@ -4,9 +4,11 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "build": "webpack --mode production && javascript-obfuscator dist/bundle.js --output dist/main.js && rm dist/bundle.js",
     "pull": "node git.config.js pull",
-    "push": "node git.config.js push"
+    "push": "node git.config.js push",
+    "build": "webpack --mode production && javascript-obfuscator dist/bundle.js --output dist/main.js && rm dist/bundle.js",
+    "package": "tar -C dist  -cvJf dist/dist.tar.xz main.js",
+    "clean": "rm -rf node_modules dist package-lock.json"
   },
   "dependencies": {
     "express": "^4.17.1",
