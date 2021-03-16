@@ -6,7 +6,6 @@ const rl = readline.createInterface( {
   input: process.stdin,
   output: process.stdout
 } )
-var cmd = ''
 
 version = config[ 'version' ]
 
@@ -18,7 +17,7 @@ if ( process.argv.includes( 'pull' ) ) {
 	} )
 } else if ( process.argv.includes( 'push' ) ) {
 	rl.question( '', ( commit ) => {
-		cmd = 'git add . && git commit -m "'+ commit +'" && git push '
+		var cmd = 'git add . && git commit -m "'+ commit +'" && git push '
 		exec( cmd, ( error, stdOut, stdErr ) => {
 			if ( error == null ) {
 				console.log( '\033[1A' + stdOut.slice( 0, -1 ) )
@@ -26,6 +25,4 @@ if ( process.argv.includes( 'pull' ) ) {
 		} )
 		rl.close( )
 	} )
-} else {
-	process.exit( )
 }
