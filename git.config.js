@@ -1,10 +1,8 @@
 const config = require( './package.json' )
 const exec = require( 'child_process' ).exec
-const readline = require( 'readline' )
-
-const rl = readline.createInterface( {
-  input: process.stdin,
-  output: process.stdout
+const readline = require( 'readline' ).createInterface( {
+	input: process.stdin,
+	output: process.stdout
 } )
 
 version = config[ 'version' ]
@@ -16,13 +14,13 @@ if ( process.argv.includes( 'pull' ) ) {
 		}
 	} )
 } else if ( process.argv.includes( 'push' ) ) {
-	rl.question( '', ( commit ) => {
+	readline.question( '', ( commit ) => {
 		var cmd = 'git add . && git commit -m "'+ commit +'" && git push '
 		exec( cmd, ( error, stdOut, stdErr ) => {
 			if ( error == null ) {
 				console.log( '\033[1A' + stdOut.slice( 0, -1 ) )
 			}
 		} )
-		rl.close( )
+		readline.close( )
 	} )
 }
