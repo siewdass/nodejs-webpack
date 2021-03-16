@@ -10,7 +10,7 @@ if ( process.argv.includes( 'pull' ) ) {
 } else if ( process.argv.includes( 'push' ) ) {
 	cmd = 'git add . && git commit -m "-" && git push'
 } else {
-	process.exit( )
+	process.exit( ) 
 }
 
 exec( cmd, function ( error, stdOut, stdErr ) {
