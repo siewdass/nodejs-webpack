@@ -19,8 +19,7 @@ if ( process.argv.includes( 'pull' ) ) {
 
 		exec( cmd, ( error, stdOut, stdErr ) => {
 			if ( error == null ) {
-				//console.log( stdOut.slice( 0, -1 ) )
-				console.log( '\033[1A' + stdOut )
+				console.log( '\033[1A' + stdOut.slice( 0, -1 ) )
 			}
 		} )
 		rl.close( )
