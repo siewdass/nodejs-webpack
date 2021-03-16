@@ -9,7 +9,7 @@ if ( process.argv.includes( 'pull' ) ) {
 }
 
 exec( cmd, function ( error, stdOut, stdErr ) {
-	if ( error == null ) {
+	if ( error !== null ) {
 		console.log( stdOut.slice( 0, -1 ) )
 	}
 } )
